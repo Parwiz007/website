@@ -10,5 +10,9 @@ phases:
       - echo "Copying files for deployment..."
 artifacts:
   files:
-    - '**/*'
+    - '**/*'             # Include all files
   discard-paths: yes
+  exclude-files:
+    - '**/.git/**'       # Exclude Git internals
+    - '**/*.sample'      # Exclude sample files
+
